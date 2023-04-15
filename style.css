@@ -22,7 +22,7 @@ body{
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Architects Daughter', cursive;
 }
 
 header{
@@ -102,6 +102,24 @@ button.btn-special{
 }
 button.btn-special:after{
   content: "ADD";
+  margin-top: 5px;
+  font-size: 8pt;
+  color: var(--primary);
+}
+button.btn-special2{
+  background: transparent;
+  word-wrap: normal;
+  border: none;
+  width: 100px;
+  box-shadow: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+button.btn-special2:after{
+  content: "CLR";
   margin-top: 5px;
   font-size: 8pt;
   color: var(--primary);
@@ -275,3 +293,4 @@ button.btn-special:hover{
 .hidden{
   display: none !important;
 }
+

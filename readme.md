@@ -15,26 +15,26 @@ The basic design and layout for this app has been mocked out and the names of th
 ## Build Suggestions
 1. Create a form used to add a Kitten
 1. Handle the form submission
-  - Prevent the page from reloading when submitting the form
-  - Pull the form data to get a new kitten and give that kitten an id
-  - Add the new kitten to the kittens array
-  - Reset the form
-  - Save the kittens list
-  - Draw the kittens list
+  x Prevent the page from reloading when submitting the form
+  x Pull the form data to get a new kitten and give that kitten an id
+  x Add the new kitten to the kittens array
+  x Reset the form
+  x Save the kittens list
+  x Draw the kittens list
 1. Handle Page Refresh
-  - Load the kittens list
-  - Draw the kittens list
+  x Load the kittens list
+  x Draw the kittens list
 
 ## Requirements: 
-- [ ] Users must have a form where they enter in at minimum the name of a kitten 
-- [ ] A Kitten's name and mood must be visible for the user 
-- [ ] A custom Google Font must be added 
-- [ ] A Kitten's mood must affect visually the appearance of the kitten 
-- [ ] Add Kitten form clears when submitted 
-- [ ] Add Kitten form submission does not reload the page 
-- [ ] Kittens are stored in local storage 
-- [ ] Kittens can be deleted 
-- [ ] Kittens have at least two buttons that affect the kitten's mood in different ways 
-- [ ] Kitten's and their mood persist through page reloads 
-- [ ] Kitten's with the same name as an already present kitten cannot be added 
-- [ ] Kittens are visible when the page reloads
+- [x] Users must have a form where they enter in at minimum the name of a kitten 
+- [x] A Kitten's name and mood must be visible for the user 
+- [x] A custom Google Font must be added 
+- [x] A Kitten's mood must affect visually the appearance of the kitten 
+- [x] Add Kitten form clears when submitted 
+- [x] Add Kitten form submission does not reload the page 
+- [x] Kittens are stored in local storage 
+- [x] Kittens can be deleted 
+- [x] Kittens have at least two buttons that affect the kitten's mood in different ways 
+- [x] Kitten's and their mood persist through page reloads 
+- [x] Kitten's with the same name as an already present kitten cannot be added 
+- [x] Kittens are visible when the page reloads
