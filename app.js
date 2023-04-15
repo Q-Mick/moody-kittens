@@ -1,6 +1,5 @@
 let kittens = []
 loadKittens()
-
 /**
  * Called when submitting the new Kitten Form
  * This method will pull data from the form
@@ -67,7 +66,6 @@ function drawKittens() {
  let kittenListElement = document.getElementById("kitten-list")
   let kittenTemplate = ""
   kittens.forEach(kitten => {
-    console.log(kitten.Id)
     kittenTemplate +=`
     <div class="card mt-1 mb-1">
     <img src="${kitten.mood}-kitty.png" height="100" alt="Kitten">
@@ -92,7 +90,6 @@ function drawKittens() {
 function findKittenById(id) {
 for (let i = 0; i < kittens.length; i++){
   if (kittens[i].Id == id){
-    console.log(kittens[i].Id)
     return i
   }
 }
@@ -108,14 +105,15 @@ for (let i = 0; i < kittens.length; i++){
  * @param {string} id 
  */
 function pet(id) {
-
+  document.getElementById("click").play()
   let currentKitten = findKittenById(id)
-  console.log(currentKitten)
   let rnd = Math.round(Math.random() * 10)
   if (rnd > 5) {
     kittens[currentKitten].affection++;
+    console.log("Affection up!")
    } else {
     kittens[currentKitten].affection--;
+    console.log("Affection down!")
 }
 
 if (kittens[currentKitten].affection <= 0) { // if affection is 0 or lower reset to 0
@@ -135,8 +133,9 @@ setKittenMood(currentKitten)
  * @param {string} id
  */
 function catnip(id) {
+  document.getElementById("click").play()
+  console.log("Affection reset!")
   let currentKitten = findKittenById(id)
-  console.log(currentKitten)
   kittens[currentKitten].affection = 5
   setKittenMood(currentKitten)
 }
@@ -147,10 +146,11 @@ function catnip(id) {
  */
 function setKittenMood(kitten) {
   
-console.log(kittens[kitten].affection)
 for (let i = 0;i < kittens.length; i++){
+
   if (kittens[i].affection >= 7){  // if its greater than 7 set mood happy
     kittens[i].mood = "happy"
+    
   }
   else if (kittens[i].affection >= 4){ // or else check if its greater than 4 
     kittens[i].mood = "tolerant"
@@ -179,10 +179,8 @@ function clearKittens(){
  */
 function getStarted() {
   document.getElementById("welcome").classList.add("hidden")
-  console.log('Good Luck, Take it away')
   document.getElementById("cat-sound").play()
   if (kittens.length == 0){
-    console.log("Kittens array is empty")
     return
   } else {
     
