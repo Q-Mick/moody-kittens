@@ -178,7 +178,7 @@ function clearKittens(){
  * list of kittens to the page. Good Luck
  */
 function getStarted() {
-  document.getElementById("welcome").remove();
+  document.getElementById("welcome").classList.add("hidden")
   console.log('Good Luck, Take it away')
   document.getElementById("cat-sound").play()
   if (kittens.length == 0){
